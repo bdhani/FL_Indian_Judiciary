@@ -1,0 +1,67 @@
+====================================================================== 
+TASK 1: OUTCOME LABELS (share per court)
+======================================================================
+outcome         ALLOWED  DISMISSED  DISPOSED  UNCLEAR  WITHDRAWN
+client                                                          
+bombay            0.194      0.161     0.464    0.033      0.148
+delhi             0.150      0.184     0.480    0.043      0.143
+karnataka         0.240      0.276     0.315    0.038      0.131
+kerala            0.213      0.250     0.417    0.072      0.048
+madhya_pradesh    0.280      0.280     0.207    0.034      0.199
+
+garbled/unreadable PDFs per court: {'bombay': 0.002, 'delhi': 0.0, 'karnataka': 0.027, 'kerala': 0.004, 'madhya_pradesh': 0.022}
+
+====================================================================== 
+TASK 2: STATUTE LABELS
+======================================================================
+vocabulary sizes: {'acts': 26, 'secs': 80, 'arts': 8}
+
+share of judgments with >=1 usable Task-2 label, per court:
+client
+bombay            0.316
+delhi             0.591
+karnataka         0.949
+kerala            0.416
+madhya_pradesh    0.551
+
+total judgments with a Task-2 label (non-garbled): 7024 of 12500
+
+TOP 15 acts: ['CRPC', 'IPC', 'CONSTITUTION', 'CPC', 'MV_ACT', 'POCSO', 'LAND_ACQ', 'ARB_ACT', 'COMPANIES', 'NDPS', 'NI_ACT', 'SARFAESI', 'IT_ACT', 'BNSS', 'LIMITATION']
+TOP 20 sections: ['CRPC_439', 'CRPC_482', 'IPC_34', 'IPC_506', 'CRPC_437', 'IPC_323', 'IPC_420', 'MV_ACT_173', 'CRPC_438', 'IPC_406', 'IPC_376', 'IPC_302', 'IPC_498A', 'IPC_324', 'IPC_294', 'IPC_307', 'IPC_341', 'IPC_354', 'IPC_468', 'CPC_151']
+TOP articles: ['ART_226', 'ART_227', 'ART_21', 'ART_14', 'ART_19', 'ART_215', 'ART_142', 'ART_16']
+
+act share per court (how different the courts are = non-IID):
+              bombay  delhi  karnataka  kerala  madhya_pradesh
+CRPC           0.067  0.224      0.257   0.194           0.384
+IPC            0.160  0.251      0.168   0.178           0.222
+CONSTITUTION   0.034  0.176      0.445   0.090           0.072
+CPC            0.025  0.059      0.202   0.024           0.050
+MV_ACT         0.007  0.010      0.123   0.010           0.031
+POCSO          0.026  0.026      0.017   0.016           0.031
+LAND_ACQ       0.043  0.006      0.038   0.011           0.010
+ARB_ACT        0.006  0.068      0.011   0.002           0.004
+COMPANIES      0.009  0.012      0.044   0.010           0.002
+NDPS           0.003  0.010      0.008   0.020           0.032
+
+train/val/test sizes per court:
+split           test  train  val
+client                          
+bombay           366   1761  373
+delhi            373   1753  374
+karnataka        363   1750  387
+kerala           363   1753  384
+madhya_pradesh   371   1844  285
+
+random outcome evidence (for manual checking):
+  [bombay        ] DISPOSED  <- ...' copy be uploaded thereafter. The civil application stands disposed of accordingly. (ABHAY J. MANTRI, J.) (NIT'
+  [kerala        ] DISPOSED  <- ...'lear off the liability. 11. The writ petition is therefore disposed of with the following directions: (i) The '
+  [bombay        ] DISMISSED <- ...'17 of the C.P.C., meaning thereby that the appeal cannot be dismissed on merit. 3) In support of her case she'
+  [delhi         ] DISPOSED  <- ...'of in the aforesaid terms. 15. Pending application is also disposed of. AMIT MAHAJAN, J JANUARY 12, 2024 / ‘KD'
+  [karnataka     ] DISMISSED <- ...' objections are not complied with, hence appeal shall stand dismissed. COPY I/c ASSISTANT REGISTRAR T By : SR'
+  [bombay        ] ALLOWED   <- ...'For the reasons set out in the application, the application is allowed as prayed for. (Anil L. Pansare, J.) wa'
+  [delhi         ] DISMISSED <- ...'024 18. The writ petition is without any merit. The same is dismissed. V. KAMESWAR RAO, J SAURABH BANERJEE, J'
+  [delhi         ] ALLOWED   <- ...'s emanating therefrom are quashed. 19. The petition stands disposed of. NEENA BANSAL KRISHNA, J JULY 22, 2024/'
+  [karnataka     ] DISPOSED  <- ...'would CRL.P No. 9538 of 2024 seek a prayer for expeditious disposal of the proceedings before the concerned Co'
+  [madhya_pradesh] DISPOSED  <- ...'cy still exists. 2. With the aforesaid, the petition stands disposed of. ac/- 2'
+  [delhi         ] DISPOSED  <- ...'by the respondent, in the interest of justice, petition is disposed of with the direction that evidence be rec'
+  [delhi         ] DISPOSED  <- ...'the applicant on 11.02.2025 and execution petition has been closed. This stand of the Respondent is taken '
